@@ -1,0 +1,24 @@
+23/10/25
+
+
+
+pesquisar:
+	-> classe canonica ortodoxa
+	-> construtor de cópia && operator overloading:
+		-> sintaxe
+		->praq serve
+
+	-> numeros de ponto fixo
+
+
+links:
+
+	https://www.programiz.com/cpp-programming/operator-overloading
+	
+	https://www.cprogramming.com/tutorial/floating_point/understanding_floating_point.html
+
+	https://en.cppreference.com/w/cpp/language/copy_constructor.html
+
+	https://stackoverflow.com/questions/79677/whats-the-best-way-to-do-fixed-point-math
+	
+	https://riceset.com/C++/The-Orthodox-Canonical-Class-Form

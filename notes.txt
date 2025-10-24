@@ -1,6 +1,12 @@
 23/10/25
 
 
+revisar:
+	-> const value
+	-> pra q serve destrutor
+	-> praq serve construtor de copia
+	-> operator overloading
+
 
 pesquisar:
 	-> classe canonica ortodoxa
@@ -22,3 +28,4 @@ links:
 	https://stackoverflow.com/questions/79677/whats-the-best-way-to-do-fixed-point-math
 	
 	https://riceset.com/C++/The-Orthodox-Canonical-Class-Form
+

@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 16:19:12 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/10/23 17:33:00 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/10/24 11:25:00 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@ class Fixed
 {
 	private:
 		int value_fixed_point;
-		const int bits;
+		static const int bits;
 
 
 	public:
 		Fixed();
-		Fixed(const Fixed&);
-		// operator overload
+		Fixed(const Fixed& other);
+		Fixed& operator=(const Fixed& other);
+		
 		~Fixed();
 
 

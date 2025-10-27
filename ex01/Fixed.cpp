@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 20:24:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/10/27 13:21:41 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/10/27 16:05:02 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,11 @@ int Fixed::toInt() const
 
 	result = value_fixed_point >> bits;
 	return result;
+}
+
+std::ostream& operator<<(std::ostream &outStream, Fixed const &parameter)
+{
+	outStream << parameter.toFloat();
+	return (outStream);
 }
 

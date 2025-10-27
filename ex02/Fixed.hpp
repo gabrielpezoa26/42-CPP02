@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 16:19:07 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/10/27 16:04:51 by gcesar-n         ###   ########.fr       */
+/*   Created: 2025/10/27 16:22:06 by gcesar-n          #+#    #+#             */
+/*   Updated: 2025/10/27 16:24:08 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
-int main( void )
-{
-		Fixed a;
-		Fixed b( a );
-		Fixed c;
-		c = b;
-		std::cout << a.getRawBits() << std::endl;
-		std::cout << b.getRawBits() << std::endl;
-		std::cout << c.getRawBits() << std::endl;
-		return 0;
-}
+#include <iostream>
+#include <cmath>
+
+
+
+
+#endif

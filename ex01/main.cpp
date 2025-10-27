@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 23:10:44 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/10/27 13:16:16 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/10/27 16:04:38 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main()
 	Fixed const b ( -10 );
 
 	Fixed const c (42.42f);
-	// c.toFloat();
+	c.toFloat();
 	b.toInt();
 }
 
@@ -40,3 +40,28 @@ int main()
 // 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
 // 	return 0;
 // }
+
+/*
+Should output something similar to:
+$> ./a.out
+Default constructor called
+Int constructor called
+Float constructor called
+Copy constructor called
+Copy assignment operator called
+Float constructor called
+Copy assignment operator called
+Destructor called
+a is 1234.43
+b is 10
+c is 42.4219
+d is 10
+a is 1234 as integer
+b is 10 as integer
+c is 42 as integer
+d is 10 as integer
+Destructor called
+Destructor called
+Destructor called
+Destructor called
+*/

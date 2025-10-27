@@ -1,15 +1,14 @@
 26/10/25
 
+ex01:
+	-> implementar:
+		-> toFloat()
+		-> toInt()
+		-> operator overload
 
-revisar:
-	-> const value
-	-> classe canonica ortodoxa
-	-> construtor de cópia && operator overloading:
-		-> sintaxe
-		->praq serve
 
-	-> numeros de ponto fixo
-
+	-> estudar:
+		-> como converter os baguio p float int etc
 
 links:
 

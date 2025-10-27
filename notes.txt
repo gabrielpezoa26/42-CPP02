@@ -2,15 +2,19 @@
 
 ex01:
 	-> implementar:
-		-> toFloat()
-		-> toInt()
 		-> operator overload
 
 
-	-> estudar:
+	-> estudar/revisar:
+		-> representaçao em bits no geral
+		-> conversao int/float pra fixed point
 		-> como converter os baguio p float int etc
+		-> operator overloading
 
 links:
+
+	
+	https://www.allaboutcircuits.com/technical-articles/fixed-point-representation-the-q-format-and-addition-examples/
 
 	https://www.programiz.com/cpp-programming/operator-overloading
 	

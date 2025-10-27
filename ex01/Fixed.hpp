@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 20:19:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/10/27 00:33:47 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/10/27 12:21:49 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,20 +25,16 @@ class Fixed
 
 	public:
 		Fixed();
-
 		Fixed(const int integerParameter);
 		Fixed(const float floatParameter);
-
-		
 		Fixed(const Fixed& other);
 		Fixed& operator=(const Fixed& other);
 		~Fixed();
-		
+
 		int getRawBits( void ) const;
 		void setRawBits( int const raw);
-		
-		float toFloat( void ) const;
 		int toInt( void ) const;
+		float toFloat( void ) const;
 		//operator overload()
 };
 
@@ -54,11 +50,11 @@ void log(std::string message);
 
 // 	• A constructor that takes a constant integer as a parameter.
 // 	It converts it to the corresponding fixed-point value. The fractional bits value
-// 	should be initialized to 8, like in exercise 00.
+// 	should be initialized to 8, like in exercise 00.       ok
 		
 // 	• A constructor that takes a constant floating-point number as a parameter.
 // 	It converts it to the corresponding fixed-point value. The fractional bits value
-// 	should be initialized to 8, like in exercise 00.
+// 	should be initialized to 8, like in exercise 00.      ok
 		
 // 	• A member function float toFloat( void ) const;
 // 	that converts the fixed-point value to a floating-point value.

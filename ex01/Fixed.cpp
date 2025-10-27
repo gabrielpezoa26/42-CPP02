@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 20:24:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/10/27 00:35:42 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/10/27 13:21:41 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,24 @@ void log(std::string message)
 {
 	std::cout << message << std::endl;
 }
+
 Fixed::Fixed()
 {
 	log("Default constructor called");
 	value_fixed_point = 0;
+}
+
+Fixed::Fixed(const int integerParameter)
+{
+	log("Int constructor called");
+	value_fixed_point = integerParameter << bits;
+}
+
+Fixed::Fixed(const float floatParameter)
+{
+	log("Float constructor called");
+	value_fixed_point = roundf(floatParameter * (1 << bits));
+	std::cout << value_fixed_point << std::endl;
 }
 
 Fixed::Fixed(const Fixed& other)
@@ -48,11 +62,30 @@ Fixed::~Fixed()
 int Fixed::getRawBits() const
 {
 	log("getRawBits member function called");
-	return value_fixed_point;
+	return (value_fixed_point);
 }
 
 void Fixed::setRawBits(int const raw)
 {
 	value_fixed_point = raw;
+}
+
+float Fixed::toFloat(void) const
+{
+	const float scalingFactor = 256.0f;
+	float floatValue = 0;
+	float result = 0;
+
+	floatValue = static_cast<float>(this->value_fixed_point);
+	result = (floatValue / scalingFactor);
+	return result;
+}
+
+int Fixed::toInt() const
+{
+	int result = 0;
+
+	result = value_fixed_point >> bits;
+	return result;
 }
 

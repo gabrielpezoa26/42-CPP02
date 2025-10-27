@@ -1,14 +1,8 @@
-23/10/25
+26/10/25
 
 
 revisar:
 	-> const value
-	-> pra q serve destrutor
-	-> praq serve construtor de copia
-	-> operator overloading
-
-
-pesquisar:
 	-> classe canonica ortodoxa
 	-> construtor de cópia && operator overloading:
 		-> sintaxe

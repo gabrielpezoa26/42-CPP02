@@ -1,15 +1,18 @@
-26/10/25
+30/10/25
 
-ex01:
-	-> implementar:
-		-> operator overload
+-> estudar/revisar:
+	-> representaçao em bits no geral
+	-> conversao int/float pra fixed point
+	-> como converter os baguio p float int etc
+	-> operator overloading
 
 
-	-> estudar/revisar:
-		-> representaçao em bits no geral
-		-> conversao int/float pra fixed point
-		-> como converter os baguio p float int etc
-		-> operator overloading
+
+ex02:
+	->adicionar:
+		-> 6 operadores de comparação
+		-> operadores aritimeticos
+		-> 4 operadores increment/decrement 
 
 links:
 

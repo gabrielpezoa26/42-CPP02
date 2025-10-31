@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:06:22 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/10/31 15:58:12 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/10/31 18:59:55 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,8 +95,6 @@ std::ostream& operator<<(std::ostream &outStream, Fixed const &parameter)
 	return (outStream);
 }
 
-// The 6 comparison operators: >, <, >=, <=, ==, and !=
-
 bool Fixed::operator>(const Fixed& other)const
 {
 	return (value_fixed_point > other.value_fixed_point);
@@ -127,4 +125,22 @@ bool Fixed::operator!=(const Fixed& other)const
 	return (value_fixed_point != other.value_fixed_point);
 }
 
-// The 4 arithmetic operators: +, -, *, and /.
+Fixed Fixed::operator+(const Fixed& other)const
+{
+	return (value_fixed_point + other.value_fixed_point);
+}
+
+Fixed Fixed::operator-(const Fixed& other)const
+{
+	return (value_fixed_point - other.value_fixed_point);
+}
+
+Fixed Fixed::operator*(const Fixed& other)const
+{
+	return (value_fixed_point * other.value_fixed_point);
+}
+
+Fixed Fixed::operator/(const Fixed& other)const
+{
+	return (value_fixed_point / other.value_fixed_point);
+}

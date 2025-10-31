@@ -10,7 +10,7 @@
 
 ex02:
 	->adicionar:
-		-> 6 operadores de comparação
+		-> 6 operadores de comparação           ok
 		-> operadores aritimeticos
 		-> 4 operadores increment/decrement 
 

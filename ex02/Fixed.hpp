@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:22:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/10/29 14:58:16 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/10/31 15:58:15 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,13 @@ class Fixed
 		void setRawBits( int const raw);
 		int toInt( void ) const;
 		float toFloat( void ) const;
+
+		bool operator>(const Fixed& other)const;
+		bool operator<(const Fixed& other)const;
+		bool operator>=(const Fixed& other)const;
+		bool operator<=(const Fixed& other)const;
+		bool operator==(const Fixed& other)const;
+		bool operator!=(const Fixed& other)const;
 };
 		
 void log(std::string message);

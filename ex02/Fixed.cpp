@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:06:22 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/10/31 18:59:55 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/10/31 21:37:43 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,4 +143,30 @@ Fixed Fixed::operator*(const Fixed& other)const
 Fixed Fixed::operator/(const Fixed& other)const
 {
 	return (value_fixed_point / other.value_fixed_point);
+}
+
+Fixed& Fixed::operator++()
+{
+	this->value_fixed_point++;
+	return *this;
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed temp = *this;
+	++(*this);
+	return temp;
+}
+
+Fixed& Fixed::operator--()
+{
+	this->value_fixed_point--;
+	return *this;
+}
+
+Fixed Fixed::operator--(int)
+{
+	Fixed temp = *this;
+	--(*this);
+	return temp;
 }

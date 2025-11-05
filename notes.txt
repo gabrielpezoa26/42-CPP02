@@ -1,12 +1,15 @@
 05/11/25
 
-->ver se tira as msg de log
+
+->fazer:
+	-> adicionar macro pro 256
+	-> organizar as funçoes
+	-> adicionar comentarios d separaçao
+
 
 -> estudar/revisar:
 	-> representaçao em bits no geral
-	-> conversao int/float pra fixed point
-	-> como converter os baguio p float int etc
-	-> operator overloading
+
 
 
 links:

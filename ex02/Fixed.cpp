@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:06:22 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/11/04 22:13:30 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/11/05 19:05:14 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,20 @@ void log(std::string message)
 
 Fixed::Fixed()
 {
-	log("Default constructor called");
+	// log("Default constructor called");
 	value_fixed_point = 0;
 }
 
 Fixed::Fixed(const int integerParameter)
 {
-    // log("Int constructor called");
-    value_fixed_point = integerParameter * 256;
+	// log("Int constructor called");
+	value_fixed_point = integerParameter * 256;
 }
 
 Fixed::Fixed(const float floatParameter)
 {
-    // log("Float constructor called");
-    value_fixed_point = roundf(floatParameter * 256.0f);
-    // std::cout << value_fixed_point << std::endl;
+	// log("Float constructor called");
+	value_fixed_point = roundf(floatParameter * 256.0f);
 }
 
 Fixed::Fixed(const Fixed& other)
@@ -83,10 +82,10 @@ float Fixed::toFloat(void) const
 
 int Fixed::toInt() const
 {
-    int result = 0;
+	int result = 0;
 
-    result = value_fixed_point / 256;
-    return result;
+	result = value_fixed_point / 256;
+	return result;
 }
 
 std::ostream& operator<<(std::ostream &outStream, Fixed const &parameter)
@@ -124,26 +123,25 @@ bool Fixed::operator!=(const Fixed& other)const
 {
 	return (value_fixed_point != other.value_fixed_point);
 }
+
 Fixed Fixed::operator+(const Fixed& other) const
 {
-    // Convert both to floats, add them,
-    // and let the float constructor handle the conversion back.
-    return Fixed(this->toFloat() + other.toFloat());
+	return Fixed(this->toFloat() + other.toFloat());
 }
 
 Fixed Fixed::operator-(const Fixed& other) const
 {
-    return Fixed(this->toFloat() - other.toFloat());
+	return Fixed(this->toFloat() - other.toFloat());
 }
 
 Fixed Fixed::operator*(const Fixed& other) const
 {
-    return Fixed(this->toFloat() * other.toFloat());
+	return Fixed(this->toFloat() * other.toFloat());
 }
 
 Fixed Fixed::operator/(const Fixed& other) const
 {
-    return Fixed(this->toFloat() / other.toFloat());
+	return Fixed(this->toFloat() / other.toFloat());
 }
 
 Fixed& Fixed::operator++()

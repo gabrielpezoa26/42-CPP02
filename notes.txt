@@ -1,4 +1,6 @@
-04/11/25
+05/11/25
+
+->ver se tira as msg de log
 
 -> estudar/revisar:
 	-> representaçao em bits no geral

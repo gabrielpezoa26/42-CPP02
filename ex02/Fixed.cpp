@@ -27,26 +27,26 @@ Fixed::Fixed()
 
 Fixed::Fixed(const int integerParameter)
 {
-	log("Int constructor called");
-	value_fixed_point = integerParameter << bits;
+    // log("Int constructor called");
+    value_fixed_point = integerParameter * 256;
 }
 
 Fixed::Fixed(const float floatParameter)
 {
-	log("Float constructor called");
-	value_fixed_point = roundf(floatParameter * (1 << bits));
-	std::cout << value_fixed_point << std::endl;
+    // log("Float constructor called");
+    value_fixed_point = roundf(floatParameter * 256.0f);
+    // std::cout << value_fixed_point << std::endl;
 }
 
 Fixed::Fixed(const Fixed& other)
 {
-	log("Copy constructor called");
+	// log("Copy constructor called");
 	*this = other;
 }
 
 Fixed& Fixed::operator=(const Fixed& other)
 {
-	log("Copy assignment operator called");
+	// log("Copy assignment operator called");
 	if (this != &other)
 	{
 		this->value_fixed_point = other.getRawBits();
@@ -56,12 +56,12 @@ Fixed& Fixed::operator=(const Fixed& other)
 
 Fixed::~Fixed()
 {
-	log("Destructor called");
+	// log("Destructor called");
 }
 
 int Fixed::getRawBits() const
 {
-	log("getRawBits member function called");
+	// log("getRawBits member function called");
 	return (value_fixed_point);
 }
 
@@ -83,10 +83,10 @@ float Fixed::toFloat(void) const
 
 int Fixed::toInt() const
 {
-	int result = 0;
+    int result = 0;
 
-	result = value_fixed_point >> bits;
-	return result;
+    result = value_fixed_point / 256;
+    return result;
 }
 
 std::ostream& operator<<(std::ostream &outStream, Fixed const &parameter)
@@ -124,25 +124,26 @@ bool Fixed::operator!=(const Fixed& other)const
 {
 	return (value_fixed_point != other.value_fixed_point);
 }
-
-Fixed Fixed::operator+(const Fixed& other)const
+Fixed Fixed::operator+(const Fixed& other) const
 {
-	return (value_fixed_point + other.value_fixed_point);
+    // Convert both to floats, add them,
+    // and let the float constructor handle the conversion back.
+    return Fixed(this->toFloat() + other.toFloat());
 }
 
-Fixed Fixed::operator-(const Fixed& other)const
+Fixed Fixed::operator-(const Fixed& other) const
 {
-	return (value_fixed_point - other.value_fixed_point);
+    return Fixed(this->toFloat() - other.toFloat());
 }
 
-Fixed Fixed::operator*(const Fixed& other)const
+Fixed Fixed::operator*(const Fixed& other) const
 {
-	return (value_fixed_point * other.value_fixed_point);
+    return Fixed(this->toFloat() * other.toFloat());
 }
 
-Fixed Fixed::operator/(const Fixed& other)const
+Fixed Fixed::operator/(const Fixed& other) const
 {
-	return (value_fixed_point / other.value_fixed_point);
+    return Fixed(this->toFloat() / other.toFloat());
 }
 
 Fixed& Fixed::operator++()

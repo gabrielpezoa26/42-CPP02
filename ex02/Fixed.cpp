@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:06:22 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/10/31 21:37:43 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/11/04 22:13:30 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int Fixed::toInt() const
 std::ostream& operator<<(std::ostream &outStream, Fixed const &parameter)
 {
 	outStream << parameter.toFloat();
-	return (outStream);
+	return outStream;
 }
 
 bool Fixed::operator>(const Fixed& other)const
@@ -169,4 +169,32 @@ Fixed Fixed::operator--(int)
 	Fixed temp = *this;
 	--(*this);
 	return temp;
+}
+
+Fixed& Fixed::min(Fixed& a, Fixed& b)
+{
+	if (a < b)
+		return a;
+	return b;
+}
+
+const Fixed& Fixed::min(const Fixed& a, const Fixed& b)
+{
+	if (a < b)
+		return a;
+	return b;
+}
+
+Fixed& Fixed::max(Fixed& a, Fixed& b)
+{
+	if (a > b)
+		return a;
+	return b;
+}
+
+const Fixed& Fixed::max(const Fixed& a, const Fixed& b)
+{
+	if (a > b)
+		return a;
+	return b;
 }

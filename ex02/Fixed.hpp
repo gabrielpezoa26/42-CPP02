@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:22:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/10/31 20:48:56 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/11/04 11:13:06 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,11 @@ class Fixed
 		Fixed operator++(int);
 		Fixed& operator--();
 		Fixed operator--(int);
+
+		static Fixed& min(Fixed& a, Fixed& b);
+		static const Fixed& min(const Fixed& a, const Fixed& b);
+		static Fixed& max(Fixed& a, Fixed& b);
+		static const Fixed& max(const Fixed& a, const Fixed& b);
 };
 
 void log(std::string message);

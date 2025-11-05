@@ -1,4 +1,4 @@
-30/10/25
+04/11/25
 
 -> estudar/revisar:
 	-> representaçao em bits no geral
@@ -6,13 +6,6 @@
 	-> como converter os baguio p float int etc
 	-> operator overloading
 
-
-
-ex02:
-	->adicionar:
-		-> 6 operadores de comparação           ok
-		-> operadores aritimeticos
-		-> 4 operadores increment/decrement 
 
 links:
 

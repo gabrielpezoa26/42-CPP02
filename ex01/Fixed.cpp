@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 20:24:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/10/31 15:38:54 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/11/06 12:12:06 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ Fixed::~Fixed()
 
 int Fixed::getRawBits() const
 {
-	log("getRawBits member function called");
 	return (value_fixed_point);
 }
 

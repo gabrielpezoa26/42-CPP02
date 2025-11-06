@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 20:19:40 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/10/27 15:59:53 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/11/06 12:13:42 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,3 @@ std::ostream& operator<<(std::ostream &outStream, Fixed const &parameter);
 
 
 #endif
-
-
-// 	And add the following function to the Fixed class files:
-// 	• An overload of the insertion («) operator that inserts a floating-point representation
-// 	of the fixed-point number into the output stream object passed as a parameter

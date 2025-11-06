@@ -6,18 +6,11 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:23:44 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/11/04 21:38:49 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/11/06 12:14:19 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
-// int main()
-// {
-// 	log("compiled!");
-// 	return (0);
-// }
-
 
 int main( void ) {
 Fixed a;

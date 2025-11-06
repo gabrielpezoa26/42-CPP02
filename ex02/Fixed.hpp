@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:22:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/11/04 11:13:06 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/11/06 09:08:52 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Fixed
 
 
 	public:
+		// OOP utilities
 		Fixed();
 		Fixed(const int integerParameter);
 		Fixed(const float floatParameter);
@@ -31,11 +32,15 @@ class Fixed
 		Fixed& operator=(const Fixed& other);
 		~Fixed();
 
+		// getter and setter
 		int getRawBits( void ) const;
 		void setRawBits( int const raw);
+
+		// conversion methods
 		int toInt( void ) const;
 		float toFloat( void ) const;
 
+		// comparison operators
 		bool operator>(const Fixed& other)const;
 		bool operator<(const Fixed& other)const;
 		bool operator>=(const Fixed& other)const;
@@ -43,16 +48,19 @@ class Fixed
 		bool operator==(const Fixed& other)const;
 		bool operator!=(const Fixed& other)const;
 
+		// arithmetic operators
 		Fixed operator+(const Fixed& other)const;
 		Fixed operator-(const Fixed& other)const;
 		Fixed operator*(const Fixed& other)const;
 		Fixed operator/(const Fixed& other)const;
 
-		Fixed& operator++(); 
+		// increment && decrement operators
+		Fixed& operator++();
 		Fixed operator++(int);
 		Fixed& operator--();
 		Fixed operator--(int);
 
+		// utility class functions
 		static Fixed& min(Fixed& a, Fixed& b);
 		static const Fixed& min(const Fixed& a, const Fixed& b);
 		static Fixed& max(Fixed& a, Fixed& b);
@@ -61,6 +69,5 @@ class Fixed
 
 void log(std::string message);
 std::ostream& operator<<(std::ostream &outStream, Fixed const &parameter);
-
 
 #endif

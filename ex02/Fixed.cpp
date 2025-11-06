@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:06:22 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/11/05 19:05:14 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/11/06 09:15:45 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void log(std::string message)
 	std::cout << message << std::endl;
 }
 
+/* ============= OOP utilities ============= */
 Fixed::Fixed()
 {
 	// log("Default constructor called");
@@ -58,6 +59,7 @@ Fixed::~Fixed()
 	// log("Destructor called");
 }
 
+/* ============= getter and setter ============= */
 int Fixed::getRawBits() const
 {
 	// log("getRawBits member function called");
@@ -69,6 +71,7 @@ void Fixed::setRawBits(int const raw)
 	value_fixed_point = raw;
 }
 
+/* ============= conversion functions ============= */
 float Fixed::toFloat(void) const
 {
 	const float scalingFactor = 256.0f;
@@ -88,11 +91,14 @@ int Fixed::toInt() const
 	return result;
 }
 
+/* ============= assign operator overload ============= */
 std::ostream& operator<<(std::ostream &outStream, Fixed const &parameter)
 {
 	outStream << parameter.toFloat();
 	return outStream;
 }
+
+/* ============= comparison operators ============= */
 
 bool Fixed::operator>(const Fixed& other)const
 {
@@ -124,6 +130,8 @@ bool Fixed::operator!=(const Fixed& other)const
 	return (value_fixed_point != other.value_fixed_point);
 }
 
+/* ============= arithmetic operators ============= */
+
 Fixed Fixed::operator+(const Fixed& other) const
 {
 	return Fixed(this->toFloat() + other.toFloat());
@@ -144,6 +152,7 @@ Fixed Fixed::operator/(const Fixed& other) const
 	return Fixed(this->toFloat() / other.toFloat());
 }
 
+/* ============= increment && decrement operators ============= */
 Fixed& Fixed::operator++()
 {
 	this->value_fixed_point++;
@@ -170,6 +179,7 @@ Fixed Fixed::operator--(int)
 	return temp;
 }
 
+/* ============= utility functions ============= */
 Fixed& Fixed::min(Fixed& a, Fixed& b)
 {
 	if (a < b)

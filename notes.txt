@@ -1,15 +1,12 @@
-05/11/25
+06/11/25
 
 
-->fazer:
-	-> adicionar macro pro 256
-	-> organizar as funçoes
-	-> adicionar comentarios d separaçao
-
-
--> estudar/revisar:
-	-> representaçao em bits no geral
-
+->finalizar:
+	-> revisar os arquivos
+	-> push intra
+	-> eval
+	-> tirar notes.txt
+	-> tirar as msg de print
 
 
 links:

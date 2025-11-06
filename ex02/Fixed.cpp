@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:06:22 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/11/06 09:15:45 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/11/06 12:08:24 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,31 +22,26 @@ void log(std::string message)
 /* ============= OOP utilities ============= */
 Fixed::Fixed()
 {
-	// log("Default constructor called");
 	value_fixed_point = 0;
 }
 
 Fixed::Fixed(const int integerParameter)
 {
-	// log("Int constructor called");
 	value_fixed_point = integerParameter * 256;
 }
 
 Fixed::Fixed(const float floatParameter)
 {
-	// log("Float constructor called");
 	value_fixed_point = roundf(floatParameter * 256.0f);
 }
 
 Fixed::Fixed(const Fixed& other)
 {
-	// log("Copy constructor called");
 	*this = other;
 }
 
 Fixed& Fixed::operator=(const Fixed& other)
 {
-	// log("Copy assignment operator called");
 	if (this != &other)
 	{
 		this->value_fixed_point = other.getRawBits();
@@ -56,13 +51,12 @@ Fixed& Fixed::operator=(const Fixed& other)
 
 Fixed::~Fixed()
 {
-	// log("Destructor called");
+	
 }
 
 /* ============= getter and setter ============= */
 int Fixed::getRawBits() const
 {
-	// log("getRawBits member function called");
 	return (value_fixed_point);
 }
 
